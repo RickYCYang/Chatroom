@@ -1,0 +1,32 @@
+services:
+  chatroom-backend:
+    image: chatroom-backend-prod
+    build:
+      context: ./backend # The context will pick this directory as the "build context"
+      dockerfile: Dockerfile # This will simply tell which dockerfile to read    
+    ports:
+      - 3000:3000
+    container_name: chatroom-backend-prod # This will name the container todo-backend-dev
+
+  chatroom-frontend:
+    image: chatroom-frontend-prod
+    build:
+      context: ./frontend/ # The context will pick this directory as the "build context"
+      dockerfile: Dockerfile # This will simply tell which dockerfile to read
+    ports:
+      - 3001:80
+    container_name: chatroom-frontend-prod # This will name the container todo-frontend
+
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro #the final ro declares that the volume will be read-only:
+    ports:
+      - 8080:80
+    container_name: reverse-proxy
+    depends_on:
+      - chatroom-frontend
+
+  debug-helper:
+    image: busybox
+  

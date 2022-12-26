@@ -1,0 +1,8 @@
+### test route
+PATCH  http://localhost:3000/edit
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuaWNrbmFtZSI6ImFkbWluaXN0cmF0b3IiLCJ1aWQiOiJXem9qNlJCTlhVaDNLS3lzdDU4Vzc1dUhZRW0yIiwiaWF0IjoxNjY5Mzk3Mjc3LCJleHAiOjE3NTU3OTcyNzd9.keBVmzFflj6SxfIEs9BtoVOaxZrMDhy68pcDBoyFkAo
+Content-Type: application/json
+
+{
+  "nickname": "New Admin7"
+}

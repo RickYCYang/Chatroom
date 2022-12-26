@@ -1,0 +1,14 @@
+export const USER = 'user';
+export const USERS = 'users';
+export const ALL = 'all';
+export const JOIN = 'join';
+export const CHAT = 'chat';
+export const LEAVE = 'leave';
+export const MESSAGES = 'messages';
+export const NEW_MESSAGE_COUNT = 'newMessageCount';
+export const TEXT = 'text';
+export const IMAGE = 'image';
+export const LEFT = 'left';
+export const RIGHT = 'right';
+export const NEW = 'new';
+export const CLEAR = 'clear';
